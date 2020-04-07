@@ -5,6 +5,7 @@
 4. https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 5. https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 6. https://github.com/romkatv/powerlevel10k#manual
-7. https://github.com/amix/vimrc
-8. https://keypirinha.com/download.html
-9. https://www.autohotkey.com/
+7. https://github.com/gokcehan/lf/wiki/Tutorial
+8. https://github.com/amix/vimrc
+9. https://keypirinha.com/download.html
+10. https://www.autohotkey.com/
