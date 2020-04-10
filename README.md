@@ -7,5 +7,6 @@
 6. https://github.com/romkatv/powerlevel10k#manual
 7. https://github.com/gokcehan/lf/wiki/Tutorial
 8. https://github.com/amix/vimrc
-9. https://keypirinha.com/download.html
-10. https://www.autohotkey.com/
+9. https://github.com/gpakosz/.tmux
+10. https://keypirinha.com/download.html
+12. https://www.autohotkey.com/
