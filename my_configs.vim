@@ -16,8 +16,8 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 " blinks when pressing n after find
-nnoremap <silent> n n:call HLNext(0.4)<cr>
-nnoremap <silent> N N:call HLNext(0.4)<cr>
+nnoremap <silent> n n:call HLNext(0.1)<cr>
+nnoremap <silent> N N:call HLNext(0.1)<cr>
 
 function! HLNext(blinktime)
     highlight BlackOnBlack ctermfg=black ctermbg=black
@@ -46,6 +46,7 @@ set encoding=utf-8
 
 " NerdTreeTabs stuff
 " let g:nerdtree_tabs_open_on_console_startup = 1
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " ALE
 let g:ale_linters = {
@@ -69,10 +70,16 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" Custom plugins 
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tomtom/tcomment_vim'
 Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on 
+
+" SnipMate
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+
+
