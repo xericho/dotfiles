@@ -1,3 +1,5 @@
+" Map `qq` to the escape key
+imap qq <esc>
 
 " Sets relative number and goes to absolute number if not in focus
 set number relativenumber

@@ -9,7 +9,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/erich/.oh-my-zsh"
+ZSH_DISABLE_COMPFIX="true"
+export ZSH="/home/${USER}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -121,20 +122,15 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd\n'
 
-alias hyperconfig="vim /mnt/c/Users/erich/AppData/Roaming/Hyper/.hyper.js"
 alias zshrcconfig="vim ~/.zshrc"
 alias p10kconfig="vim ~/.p10k.zsh"
-alias subl="/mnt/c/Users/erich/Sublime/subl.exe"
-alias userhome="cd /mnt/c/Users/erich"
+alias subl="/mnt/c/Users/${USER}/Sublime/subl.exe"
+alias userhome="cd /mnt/c/Users/${USER}"
 alias pmr="python manage.py runserver"
 alias open="explorer.exe"
 
 # Removed green background for writeables when ls
 eval "$(dircolors ~/.dircolors)";
 
-export PATH="/home/erich/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export PATH="$PATH:/home/erich/.local/bin"
+export PATH="$PATH:/home/${USER}/.local/bin"
 
