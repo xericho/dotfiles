@@ -7,7 +7,6 @@ sudo apt update -y
 sudo apt upgrade -y
 
 
-# Optional: install zsh
 echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 echo '@                Setup environment                  @'
 echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
@@ -31,6 +30,8 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime --depth=1
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 echo "set number" >> "$HOME/.vimrc"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp env_setup/my_configs.vim ~/.vim_runtime
 
 # lf file manager
 mkdir -p $HOME/.local/bin
