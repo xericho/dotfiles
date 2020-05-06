@@ -44,3 +44,9 @@ echo 'export PATH="$PATH:/home/$USER/.local/bin"' >> "$HOME/.zshrc"
 (cd; git clone https://github.com/gpakosz/.tmux.git)
 ln -s -f ~/.tmux/.tmux.conf
 cp dotfiles/.tmux.conf.local ~
+
+# change dir colors
+cp dotfiles/.dircolors ~
+
+# snippet for django
+cp dotfiles/htmldjango.snippets ~/.vim_runtime/sources_non_forked/vim-snippets/snippets/
