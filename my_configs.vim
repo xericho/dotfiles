@@ -1,5 +1,7 @@
-" Map `qq` to the escape key
-imap qq <esc>
+" Remap the escape key, remove mapping for q (record) and Q (Ex mode)
+noremap q <Nop>
+noremap Q <Nop>
+noremap qq <esc>
 
 " Sets relative number and goes to absolute number if not in focus
 set number relativenumber
