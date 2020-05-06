@@ -1,4 +1,7 @@
 # Install Packages
+Run `setup.sh`
+
+# Sources
 1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-in-many-platforms
 2. https://github.com/ohmyzsh/ohmyzsh
 3. https://github.com/powerline/fonts
