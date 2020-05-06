@@ -2,6 +2,8 @@
 noremap q <Nop>
 noremap Q <Nop>
 noremap qq <esc>
+inoremap qq <esc>
+cnoremap qq <c-u><bs>
 
 " Sets relative number and goes to absolute number if not in focus
 set number relativenumber
