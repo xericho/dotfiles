@@ -12,9 +12,8 @@ Run `setup.sh`
 8. https://github.com/amix/vimrc
 
     ```
-    sudo apt install clang python3-dev cmake
-    cd ~/.vim/bundle/YouCompleteMe
-    ./install.py --clangd-completer
+    sudo apt install -y clang python3-dev cmake
+    ~/.vim/bundle/YouCompleteMe/install.py --clangd-completer
     ```
 9. https://github.com/gpakosz/.tmux
 10. https://keypirinha.com/download.html
