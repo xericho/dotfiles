@@ -52,5 +52,6 @@ cp dotfiles/.dircolors ~
 cp dotfiles/htmldjango.snippets ~/.vim_runtime/sources_non_forked/vim-snippets/snippets/
 
 # Install autocomplete for vim
+vim -c ':PluginInstall' -c 'q' -c 'q'
 sudo apt install -y clang python3-dev cmake
 ~/.vim/bundle/YouCompleteMe/install.py --clangd-completer
