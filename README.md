@@ -1,5 +1,5 @@
 # Install Packages
-Run `setup.sh`
+Run `setup.sh` in your home directory
 
 # Sources
 1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-in-many-platforms
