@@ -32,6 +32,7 @@ git clone https://github.com/amix/vimrc.git $HOME/.vim_runtime --depth=1
 sh $HOME/.vim_runtime/install_awesome_vimrc.sh
 echo "set number" >> "$HOME/.vimrc"
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+cp $HOME/dotfiles/onedark.vim $HOME/.vim_runtime/sources_non_forked/lightline.vim/autoload/lightline/colorscheme
 cp $HOME/dotfiles/my_configs.vim $HOME/.vim_runtime
 
 # lf file manager
