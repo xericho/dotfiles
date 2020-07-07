@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 ZSH_DISABLE_COMPFIX="true"
-export ZSH="/home/${USER}/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -124,13 +124,13 @@ bindkey -s '^o' 'lfcd\n'
 
 alias zshrcconfig="vim ~/.zshrc"
 alias p10kconfig="vim ~/.p10k.zsh"
-alias subl="/mnt/c/Users/${USER}/Sublime/subl.exe"
-alias userhome="cd /mnt/c/Users/${USER}"
-alias pmr="python manage.py runserver"
-alias open="explorer.exe"
+#alias subl="/mnt/c/Users/${USER}/Sublime/subl.exe"
+#alias userhome="cd /mnt/c/Users/${USER}"
+#alias pmr="python manage.py runserver"
+#alias open="explorer.exe"
 
 # Removed green background for writeables when ls
-eval "$(dircolors ~/.dircolors)";
+# eval "$(dircolors ~/.dircolors)";
 
-export PATH="$PATH:/home/${USER}/.local/bin"
+export PATH="$PATH:${HOME}/.local/bin"
 
