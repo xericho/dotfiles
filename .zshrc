@@ -134,3 +134,10 @@ alias p10kconfig="vim ~/.p10k.zsh"
 
 export PATH="$PATH:${HOME}/.local/bin"
 
+# change color prompt
+typeset -g POWERLEVEL9K_DIR_BACKGROUND=088
+typeset -g POWERLEVEL9K_PYENV_FOREGROUND=000
+typeset -g POWERLEVEL9K_PYENV_BACKGROUND=111
+
+# User vim by default
+export EDITOR=vim

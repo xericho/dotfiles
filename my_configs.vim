@@ -80,6 +80,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'tpope/vim-obsession'
+Plugin 'ap/vim-css-color'
+Plugin 'mattn/emmet-vim'
+Plugin 'othree/xml.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,3 +98,17 @@ let g:lightline = {
       \ 'colorscheme': 'onedark',
       \ }
 
+" Runs python files in vim
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>
+nmap <F5> <Esc>:w<CR>:!clear;python %<CR>
+
+" Refine emmet trigger key
+imap <leader>b <C-y>,
+let g:user_emmet_settings = {
+  \  'html': {
+  \    'indent_blockelement': 1,
+  \ },
+  \  'htmldjango' : {
+  \    'extends' : 'html',
+  \  },
+  \}

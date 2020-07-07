@@ -14,6 +14,7 @@ ZSH_PL = $(ZSH_OMZ)/themes/powerlevel10k
 VIM_DIR = $(HOME)/.vim_runtime
 VIM_VUN = $(HOME)/.vim/bundle/Vundle.vim
 VIM_AC = $(HOME)/.vim/bundle/YouCompleteMe/install.py 
+VIM_CONFIG = $(HOME)/.vim_runtime/my_configs.vim
 
 # TMUX
 TMUX_DIR = $(HOME)/.tmux/.tmux.conf
@@ -109,3 +110,13 @@ $(LF_DIR):
 	@curl -L https://github.com/gokcehan/lf/releases/download/r13/lf-linux-amd64.tar.gz | tar xzC $(HOME)/.local/bin
 	@echo 'export PATH="$(PATH):$(HOME)/.local/bin"' >> "$(HOME)/.zshrc"
 
+fetch: fetch_zsh fetch_vim
+	@echo -e '\nFetched all local dotfiles!'
+
+fetch_vim:
+	@cp $(VIM_CONFIG) $(ROOT_DIR) 
+	@echo 'Fetched my_configs.vim!'
+
+fetch_zsh:
+	@cp $(HOME)/.zshrc $(ROOT_DIR)
+	@echo 'Fetched .zshrc!'
