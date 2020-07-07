@@ -1,12 +1,12 @@
-# Install dotfiles
+# Install / Update dotfiles
 Clone this repo and run the following:
 ```
 cd dotfiles
 make install
 ```
 
-# Update dotfiles 
-If you want to fetch your dotfile changes, run
+# Fetch dotfiles 
+If you want to pull in your local dotfiles, run
 ```
 make fetch
 ```
