@@ -1,5 +1,15 @@
-# Install Packages
-Clone this repo in your home directory and run `setup.sh`
+# Install dotfiles
+Clone this repo and run the following:
+```
+cd dotfiles
+make install
+```
+
+# Update dotfiles 
+If you want to fetch your dotfile changes, run
+```
+make fetch
+```
 
 # Sources
 1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-in-many-platforms
