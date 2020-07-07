@@ -1,14 +1,23 @@
 # Install / Update dotfiles
-Clone this repo and run the following:
+Clone this repo and run the following to install/update all packages:
 ```
 cd dotfiles
 make install
 ```
+or install/update specific dotfiles:
+```
+make [zsh/vim/tmux/lf]
+```
+
 
 # Fetch dotfiles 
-If you want to pull in your local dotfiles, run
+If you want to pull in your local dotfiles, run:
 ```
 make fetch
+```
+or pull specific dotfiles:
+```
+make fetch_[zsh/vim]
 ```
 
 # Sources
