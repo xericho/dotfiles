@@ -20,6 +20,12 @@ or pull specific dotfiles:
 make fetch_[zsh/vim]
 ```
 
+
+# Optional
+Change default shell to zsh by running `chsh -s $(which zsh)`
+
+
+
 # Sources
 1. https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH#how-to-install-zsh-in-many-platforms
 2. https://github.com/ohmyzsh/ohmyzsh
