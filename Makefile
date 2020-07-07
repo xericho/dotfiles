@@ -98,7 +98,6 @@ tmux: | $(TMUX_DIR)
 
 # tmux goodies
 $(TMUX_DIR):
-	@echo 'installing tmux'
 	@(cd; git clone https://github.com/gpakosz/.tmux.git)
 
 
