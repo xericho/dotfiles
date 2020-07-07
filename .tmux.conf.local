@@ -98,7 +98,7 @@ tmux_conf_theme_status_attr='none'
 #     - #{hostname_ssh}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
+tmux_conf_theme_terminal_title='#h #S #I #W'
 
 # window status style
 #   - built-in variables are:
@@ -180,7 +180,7 @@ tmux_conf_theme_right_separator_sub='|'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' 🚀 #S '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}, %r , %A %d %b | #{username}#{root} | Picasso '
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}, %r , %A %d %b | #{username}#{root} | Laptop '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white

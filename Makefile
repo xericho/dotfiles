@@ -17,7 +17,7 @@ VIM_AC = $(HOME)/.vim/bundle/YouCompleteMe/install.py
 VIM_CONFIG = $(HOME)/.vim_runtime/my_configs.vim
 
 # TMUX
-TMUX_DIR = $(HOME)/.tmux/.tmux.conf
+TMUX_DIR = $(HOME)/.tmux
 
 # LF
 LF_DIR = $(HOME)/.local/bin
@@ -120,3 +120,7 @@ fetch_vim:
 fetch_zsh:
 	@cp $(HOME)/.zshrc $(ROOT_DIR)
 	@echo 'Fetched .zshrc!'
+
+fetch_tmux:
+	@cp $(HOME)/.tmux.conf.local $(ROOT_DIR)
+	@echo 'Fetched .tmux.conf.local!'
