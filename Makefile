@@ -33,11 +33,7 @@ init: dependencies
 	@echo -e '\nDone updating packages!'
 
 dependencies:
-	$(foreach pkg, $(PKGS), \
-		$(if $(shell PATH=$(PATH) which $(pkg)),, \
-			@sudo apt install $(pkg) -y \
-		) \
-	)
+	$(foreach pkg, $(PKGS), sudo apt -y install $(pkg);)
 
 
 zsh: | oh-my-zsh $(ZSH_SH) $(ZSH_AS) $(ZSH_PL) 
@@ -88,6 +84,7 @@ $(VIM_VUN):
 
 # vim-autocomplete
 $(VIM_AC):
+	@cp $(ROOT_DIR)/my_configs.vim $(VIM_DIR)
 	@vim -c ':PluginInstall' -c 'q' -c 'q'
 	@$@ --clangd-completer
 
@@ -98,7 +95,7 @@ tmux: | $(TMUX_DIR)
 
 # tmux goodies
 $(TMUX_DIR):
-	@(cd; git clone https://github.com/gpakosz/.tmux.git)
+	@(cd; git clone https://github.com/gpakosz/.tmux.git; ln -s -f .tmux/.tmux.conf)
 
 
 lf: | $(LF_DIR)
