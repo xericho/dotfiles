@@ -26,14 +26,12 @@ LF_DIR = $(HOME)/.local/bin
 install: init vim tmux lf zsh 
 	@echo -e '\nInstallation complete!'
 
-init: dependencies 
+init:
 	@sudo apt update -y
 	@sudo apt upgrade -y
+	@sudo apt install $(PKGS) -y
 	@sudo apt install fonts-powerline -y
 	@echo -e '\nDone updating packages!'
-
-dependencies:
-	$(foreach pkg, $(PKGS), sudo apt -y install $(pkg);)
 
 
 zsh: | oh-my-zsh $(ZSH_SH) $(ZSH_AS) $(ZSH_PL) 
