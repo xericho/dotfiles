@@ -21,28 +21,6 @@ let g:NERDTreeWinPos = "left"
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
-" blinks when pressing n after find
-nnoremap <silent> n n:call HLNext(0.1)<cr>
-nnoremap <silent> N N:call HLNext(0.1)<cr>
-
-function! HLNext(blinktime)
-    highlight BlackOnBlack ctermfg=black ctermbg=black
-    let [bufnum, lnum, col, off] = getpos('.')
-    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-    let hide_pat = '\%<'.lnum.'l.'
-        \ . '\|'
-        \ . '\%'.lnum.'l\%<'.col.'v.'
-        \ . '\|'
-        \ . '\%'.lnum.'l\%>'.(col+matchlen-1).'v.'
-        \ . '\|'
-        \ . '\%>'.lnum.'l.'
-    let hide = matchadd('BlackOnBlack', hide_pat, 101)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-    call matchdelete(hide)
-    redraw
-endfunction
-
 " Disable folding by default
 set nofoldenable
 
@@ -112,3 +90,10 @@ let g:user_emmet_settings = {
   \    'extends' : 'html',
   \  },
   \}
+
+" Enable cursor line position tracking:
+:set cursorline
+" Remove the underline from enabling cursorline:
+:highlight clear CursorLine
+" Set line numbering to red background:
+:highlight CursorLineNR ctermbg=blue
