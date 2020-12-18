@@ -1,0 +1,50 @@
+{
+    "python.jediEnabled": false,
+    "window.zoomLevel": 0,
+    "files.autoSave": "afterDelay",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": true,
+    "vim.leader": ",",  // change leader to ,
+    "vim.hlsearch": true, // highlight searches
+    "vim.insertModeKeyBindings": [  // exit insert mode using qq  
+        {
+            "before": ["q", "q"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [  // exit visual mode using qq
+        {
+            "before": ["q", "q"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "v"],
+            "commands": ["workbench.action.splitEditor"]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        // show file in filetree
+        {
+            "before": ["<leader>", "r"],
+            "commands": [ "revealInExplorer" ],
+        },
+        // Close highlights
+        {
+            "before": ["<leader>", "<space>"],
+            "commands": [ ":nohl" ],
+        },
+        // Open quick open
+        {
+            "before": ["<leader>", "j"],
+            "commands": [ "workbench.action.quickOpen" ],
+        },
+    ],
+}
