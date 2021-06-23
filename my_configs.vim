@@ -59,9 +59,11 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tpope/vim-obsession'
-Plugin 'ap/vim-css-color'
+" Plugin 'ap/vim-css-color'
 Plugin 'mattn/emmet-vim'
 Plugin 'othree/xml.vim'
+Plugin 'mg979/vim-visual-multi'
+Plugin 'machakann/vim-highlightedyank'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -97,3 +99,6 @@ let g:user_emmet_settings = {
 :highlight clear CursorLine
 " Set line numbering to red background:
 :highlight CursorLineNR ctermbg=blue
+
+" Change highlighted yank to half sec
+let g:highlightedyank_highlight_duration = 200
