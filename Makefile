@@ -19,11 +19,8 @@ VIM_CONFIG = $(HOME)/.vim_runtime/my_configs.vim
 # TMUX
 TMUX_DIR = $(HOME)/.tmux
 
-# LF
-LF_DIR = $(HOME)/.local/bin
 
-
-install: init vim tmux lf zsh 
+install: init vim tmux zsh 
 	@echo -e '\nInstallation complete!'
 
 init:
@@ -96,14 +93,8 @@ $(TMUX_DIR):
 	@(cd; git clone https://github.com/gpakosz/.tmux.git; ln -s -f .tmux/.tmux.conf)
 
 
-lf: | $(LF_DIR)
-	@echo -e '\nDone setting up lf!'
 
-$(LF_DIR):
-	@mkdir -p $(HOME)/.local/bin
-	@curl -L https://github.com/gokcehan/lf/releases/download/r13/lf-linux-amd64.tar.gz | tar xzC $(HOME)/.local/bin
-	@echo 'export PATH="$(PATH):$(HOME)/.local/bin"' >> "$(HOME)/.zshrc"
-
+# Dont need these commands
 fetch: fetch_zsh fetch_vim
 	@echo -e '\nFetched all local dotfiles!'
 
