@@ -9,6 +9,11 @@ or install/update specific dotfiles:
 make [zsh/vim/tmux/lf]
 ```
 
+## MacOS Setup
+```
+chmod u+x brew.sh
+./brew.sh
+```
 
 # Fetch dotfiles 
 If you want to pull in your local dotfiles, run:
