@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-echo "Installing xcode-select command line tools..."
-xcode-select --install
-
 echo "Checking for homebrew..."
 if ! $(which brew > /dev/null); then
 	echo "Installing homebrew..."
@@ -12,28 +9,31 @@ echo "Homebrew installed!"
 
 echo "Installing cask apps..."
 CASKS=(
-	visual-studio-code
-    brave-browser
-	docker
-    alfred
-    rectangle
+  visual-studio-code
+  brave-browser
+  docker
+  alfred
+  rectangle
+  obsidian
 )
 for app in "${CASKS[@]}"
-	do
-		brew install --cask "$app" || true
-	done
+  do
+    brew install --cask "$app" || true
+  done
 
 
 echo "Installing packages..."
 PACKAGES=(
-    zsh
-	python3
-	vim
+  zsh
+  python3
+  vim
+  cmake
 )
 brew install "${PACKAGES[@]}"
 
 echo "Cleaning up brew..."
 brew cleanup
+brew analytics off
 
 # Removes downloaded DMGs in cache
 rm -rf $(brew --cache)

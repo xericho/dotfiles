@@ -63,9 +63,9 @@ $(ZSH_PL):
 
 
 vim: | $(VIM_DIR) $(VIM_VUN) $(VIM_AC)
-	@cp $(ROOT_DIR)/onedark.vim $(VIM_DIR)/sources_non_forked/lightline.vim/autoload/lightline/colorscheme
-	@cp $(ROOT_DIR)/my_configs.vim $(VIM_DIR)
-	@cp $(ROOT_DIR)/htmldjango.snippets $(VIM_DIR)/sources_non_forked/vim-snippets/snippets/
+	@cp $(ROOT_DIR)/vim/onedark.vim $(VIM_DIR)/sources_non_forked/lightline.vim/autoload/lightline/colorscheme
+	@cp $(ROOT_DIR)/vim/my_configs.vim $(VIM_DIR)
+	@cp $(ROOT_DIR)/vim/htmldjango.snippets $(VIM_DIR)/sources_non_forked/vim-snippets/snippets/
 	@echo -e '\nDone setting up vim!'
 
 # vim goodies
@@ -79,7 +79,7 @@ $(VIM_VUN):
 
 # vim-autocomplete
 $(VIM_AC):
-	@cp $(ROOT_DIR)/my_configs.vim $(VIM_DIR)
+	@cp $(ROOT_DIR)/vim/my_configs.vim $(VIM_DIR)
 	@vim -c ':PluginInstall' -c 'q' -c 'q'
 	@$@ --clangd-completer
 
