@@ -7,6 +7,15 @@ if ! $(which brew > /dev/null); then
 fi
 echo "Homebrew installed!"
 
+echo "Installing taps..."
+TAPS=(
+    homebrew/cask-fonts
+)
+for tap in "${TAPS[@]}"
+  do
+    brew tap "$tap" || true
+  done
+
 echo "Installing cask apps..."
 CASKS=(
   visual-studio-code
@@ -15,6 +24,7 @@ CASKS=(
   alfred
   rectangle
   obsidian
+  font-hack-nerd-font
 )
 for app in "${CASKS[@]}"
   do
