@@ -2,7 +2,7 @@
 ROOT_DIR = $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 # Required dependencies
-PKGS = zsh powerline tmux curl clang cmake python3-dev
+PKGS = zsh tmux curl clang cmake 
 
 # ZSH 
 ZSH_OMZ = $(HOME)/.oh-my-zsh
@@ -20,14 +20,30 @@ VIM_CONFIG = $(HOME)/.vim_runtime/my_configs.vim
 TMUX_DIR = $(HOME)/.tmux
 
 
-install: init vim tmux zsh 
+ubuntu: init-ubuntu vim tmux zsh 
 	@echo -e '\nInstallation complete!'
 
-init:
+amazon-linux: init-amazon-linux vim tmux zsh 
+	@echo -e '\nInstallation complete!'
+
+init-ubuntu:
 	@sudo apt update -y
 	@sudo apt upgrade -y
 	@sudo apt install $(PKGS) -y
+	@sudo apt install powerline -y
 	@sudo apt install fonts-powerline -y
+	@echo -e '\nDone updating packages!'
+
+init-amazon-linux:
+	@sudo yum update -y
+	@sudo yum upgrade -y
+	@sudo yum install $(PKGS) -y
+	# Install powerline
+	@pip3.8 install powerline-status
+	# Install powerline fonts
+	@git clone https://github.com/powerline/fonts.git fonts-powerline --depth=1
+	@./fonts-powerline/install.sh
+	@rm -rf fonts-powerline
 	@echo -e '\nDone updating packages!'
 
 
