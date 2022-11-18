@@ -10,7 +10,12 @@ echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 echo '@                Setup environment                  @'
 echo '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 sudo yum install -y zsh
-sudo yum install -y powerline fonts-powerline
+# Install powerline
+pip3.8 install powerline-status
+# Install powerline fonts
+git clone https://github.com/powerline/fonts.git fonts-powerline --depth=1
+./fonts-powerline/install.sh
+rm -rf fonts-powerline
 # Install oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # zsh-syntax-highlighting
@@ -53,5 +58,5 @@ cp $HOME/dotfiles/htmldjango.snippets $HOME/.vim_runtime/sources_non_forked/vim-
 
 # Install autocomplete for vim
 vim -c ':PluginInstall' -c 'q' -c 'q'
-sudo apt install -y clang python3-dev cmake
+sudo yum install -y clang cmake
 $HOME/.vim/bundle/YouCompleteMe/install.py --clangd-completer
