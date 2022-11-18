@@ -1,8 +1,8 @@
 # Install / Update dotfiles
-Clone this repo and run the following to install/update all packages:
+Clone this repo and run the following to install/update all packages depending on OS:
 ```
 cd dotfiles
-make install
+make [ubuntu/amazon-linux]
 ```
 or install/update specific dotfiles:
 ```
