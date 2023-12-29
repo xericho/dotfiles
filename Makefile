@@ -20,10 +20,10 @@ VIM_CONFIG = $(HOME)/.vim_runtime/my_configs.vim
 TMUX_DIR = $(HOME)/.tmux
 
 
-ubuntu: init-ubuntu vim tmux zsh 
+ubuntu: init-ubuntu tmux zsh 
 	@echo -e '\nInstallation complete!'
 
-amazon-linux: init-amazon-linux vim tmux zsh 
+amazon-linux: init-amazon-linux tmux zsh 
 	@echo -e '\nInstallation complete!'
 
 init-ubuntu:
